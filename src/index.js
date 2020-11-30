@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import SearchBar from "./Component/searchbar";
 import React, { Component } from "react";
 import youtube from "./api/youtube";
+import VideoList from "./Component/VideoLists";
 class App extends Component {
   state = { videos: [] };
   onTermSubmit = async (term) => {
@@ -10,7 +11,7 @@ class App extends Component {
     const response = await youtube.get("/search", {
       params: { q: term },
     });
-    console.log(response);
+    console.log( response.data.items);
     this.setState({ videos: response.data.items });
   };
 
@@ -18,7 +19,7 @@ class App extends Component {
     return (
       <div>        
         <SearchBar onFormSubmit={this.onTermSubmit}></SearchBar>
-        {this.state.videos.length} vidoes are theres
+        <VideoList vi = {this.state.videos} />
       </div>
     );
   }
