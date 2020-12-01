@@ -1,4 +1,4 @@
-### VIDEO APP for search images
+### VIDEO APP for search youtube videos and played in embed form
 ### youtube api used 
 
 ### MADE WITH REACT 
