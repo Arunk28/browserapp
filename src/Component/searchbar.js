@@ -1,18 +1,15 @@
-
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class SearchBar extends Component {
-  state = { term: "tesd" };
+  state = { term: "Mookuthi amman" };
 
-  onInputChange = (event)=>{
-      this.setState({term:event.target.value})
-
+  onInputChange = (event) => {
+    this.setState({ term: event.target.value });
   };
-  onFromSubmit =(event)=>{
-      event.preventDefault();
-      this.props.onFormSubmit(this.state.term);
-
-  }
+  onFromSubmit = (event) => {
+    event.preventDefault();
+    this.props.onFormSubmit(this.state.term);
+  };
   render() {
     return (
       <div className="ui segment">
