@@ -7,7 +7,7 @@ import VideoList from "./Component/VideoLists";
 import VideoDetail from "./Component/VideoDetail";
 
 class App extends Component {
-  state = { videos: [], selectedVideo: [] };
+  state = { videos: [], selectedVideo: null };
   onTermSubmit = async (term) => {
     console.log(term);
     const response = await youtube.get("/search", {
